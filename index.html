@@ -22,19 +22,19 @@
 
         <div class="count-section">
           <div>
-            <span>0</span>
+            <span data-heart-container>0</span>
             <span>
               <img src="/src/assets/heart.png" alt="" />
             </span>
           </div>
           <div>
-            <span>100</span>
+            <span data-coin-container>100</span>
             <span>
               <img src="/src/assets/coin.png" alt="" />
             </span>
           </div>
           <div>
-            <span>0</span>
+            <span copy-count-container>0</span>
             <span>Copy</span>
           </div>
         </div>
@@ -55,8 +55,43 @@
       </section>
 
       <section class="service-section-container">
-        <div class="service-section"></div>
-        <div class="history-section"></div>
+        <div>
+          <div class="service-section" data-service-section>
+            <!-- Service cards are added through js -->
+          </div>
+          <div class="history-section">
+            <button class="history-toggle-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path></svg>
+            </button>
+
+            <button class="history-close-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10.5858L14.8284 7.75736L16.2426 9.17157L13.4142 12L16.2426 14.8284L14.8284 16.2426L12 13.4142L9.17157 16.2426L7.75736 14.8284L10.5858 12L7.75736 9.17157L9.17157 7.75736L12 10.5858Z"></path>
+              </svg>
+            </button>
+
+            <div class="history-section-content">
+              <div class="history-section-header">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path></svg>
+                  <span>Call History</span>
+                </div>
+                <button class="history-clear-btn">Clear</button>
+              </div>
+
+              <div class="history-container">
+                <!-- history is added through js-->
+                <div class="each-history">
+                  <div>
+                    <span>জাতীয় জরুরি সেবা</span>
+                    <span>999</span>
+                  </div>
+                  <span>11:36:58 AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
