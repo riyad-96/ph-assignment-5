@@ -172,9 +172,11 @@ async function copyFunc(btn) {
   try {
     await window.navigator.clipboard.writeText(contactNumber);
     copyCount += 1;
+    alert(`📋 নম্বর কপি হয়েছে: ${contactNumber}`);
     loadCopied();
   } catch (err) {
     console.error(err);
+    alert('❌ নম্বর কপি ব্যর্থ হয়েছে। console চেক করুন।');
   }
 }
 
@@ -213,6 +215,12 @@ function listener(e) {
     return;
   }
 
+  const historyClearBtn = e.target.closest('[data-history-clear-btn]');
+  if (historyClearBtn) {
+    clearHistory();
+    return;
+  }
+
   const historyContent = e.target.closest('.history-section-content');
   if (historyContent) {
     return;
@@ -245,6 +253,7 @@ function listener(e) {
   const copyBtn = e.target.closest('[data-copy-btn]');
   if (copyBtn) {
     copyFunc(copyBtn);
+    return;
   }
 }
 

@@ -363,6 +363,8 @@ main {
 }
 
 .history-container {
+  display: grid;
+  gap: 0.425rem;
   padding-block: 1rem;
 }
 
