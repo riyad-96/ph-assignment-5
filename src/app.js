@@ -151,10 +151,11 @@ function callFunc(btn) {
     return;
   }
   const id = btn.dataset.serviceId;
-  const { nameEn, contactNumber } = services.find((obj) => obj.id == id);
+  const { nameEn, nameBn, contactNumber } = services.find((obj) => obj.id == id);
   coinCount = coinCount - 20;
   alert(`📞 Calling ${nameEn} ${contactNumber}...`);
   loadCoin();
+  loadHistory({ nameBn, contactNumber, date: new Date() });
 }
 
 //! Copy
@@ -175,6 +176,33 @@ async function copyFunc(btn) {
   } catch (err) {
     console.error(err);
   }
+}
+
+//! History
+const historyContainer = document.querySelector('[data-history-container]');
+
+function loadHistory({ nameBn, contactNumber, date }) {
+  date = date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  });
+
+  const newHistoryCard = document.createElement('div');
+  newHistoryCard.className = 'each-history';
+
+  newHistoryCard.innerHTML = `<div>
+    <span>${nameBn}</span>
+    <span>${contactNumber}</span>
+  </div>
+  <span>${date}</span>`;
+  historyContainer;
+
+  historyContainer.appendChild(newHistoryCard);
+}
+function clearHistory() {
+  historyContainer.innerHTML = '';
 }
 
 //! listener
