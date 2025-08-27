@@ -203,6 +203,7 @@ function loadHistory({ nameBn, contactNumber, date }) {
 
   historyContainer.appendChild(newHistoryCard);
 }
+
 function clearHistory() {
   historyContainer.innerHTML = '';
 }

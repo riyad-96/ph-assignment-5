@@ -346,6 +346,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.225rem;
+  font-weight: 500;
 
   > div {
     display: flex;
